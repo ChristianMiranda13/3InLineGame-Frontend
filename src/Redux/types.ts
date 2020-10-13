@@ -1,14 +1,16 @@
 import { ThunkDispatch } from 'redux-thunk';
 import { AppActionTypes } from '../Reducers/App/AppActions';
+import { GameActionTypes } from '../Reducers/Game/GameActions';
 
 declare global {
   interface IAction {
-    type: AppActionTypes;
+    type: AppActionTypes | GameActionTypes;
     value?: any;
     payload?: any;
   }
 
   interface IRootState {
+    game: IGameReducerType;
     app: IAppReducerType;
   }
   /**

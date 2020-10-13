@@ -1,6 +1,7 @@
 // Modules
 import withStyles from '@material-ui/core/styles/withStyles';
 import React from 'react';
+import Layout from '../Modules/Layout/LayoutScene';
 
 class Container extends React.Component {
 
@@ -9,6 +10,7 @@ class Container extends React.Component {
     return (
       <div style={{ height: '100%' }}>
         {
+          <Layout />
         }
       </div>
     );

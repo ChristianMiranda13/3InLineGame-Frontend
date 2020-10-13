@@ -34,7 +34,7 @@ export const toCamelCase = (value: string) => {
  * copyObject
  * @param obj
  */
-export const copyObject = (obj: any) => {
+export const copyObject = (obj: IObj) => {
   try {
     return JSON.parse(JSON.stringify(obj));
   } catch (error) {
@@ -65,7 +65,7 @@ export const getSessionStorage = (key: string) => {
   return null;
 };
 
-export const setSessionStorage = (key: string, data: any) => {
+export const setSessionStorage = (key: string, data: IObj) => {
   sessionStorage.setItem(key, JSON.stringify(data));
 };
 

@@ -13,6 +13,7 @@ interface IProps {
 
 interface IHeaderState {
   redirectHome: boolean;
+  redirectGames: boolean;
 }
 
 class Header extends React.Component<IProps, IHeaderState> {
@@ -20,7 +21,13 @@ class Header extends React.Component<IProps, IHeaderState> {
   constructor(props: any) {
     super(props);
 
+    this.state = {
+      redirectHome: false,
+      redirectGames: false,
+    };
+
     this.goHome = this.goHome.bind(this);
+    this.goGames = this.goGames.bind(this);
 
   }
 
@@ -34,14 +41,35 @@ class Header extends React.Component<IProps, IHeaderState> {
     });
   }
 
+  goGames() {
+    this.setState({
+      redirectGames: true,
+    }, () => {
+      this.setState({
+        redirectGames: false,
+      });
+    });
+  }
+
   render() {
     if (this.state.redirectHome) {
       return <Redirect to={'/'} push />;
     }
+    if (this.state.redirectGames) {
+      return <Redirect to={'/games'} push />;
+    }
+
     return (
       <div style={{ flexGrow: 1 }}>
         <AppBar position='static'>
-          
+          <Toolbar>
+            <div style={styles.logoContainer}>
+              <img style={styles.imgSt} src={'/assets/TALENTA.png'} onClick={this.goHome} />
+              <Typepography style={styles.headerLink} onClick={this.goGames}>
+                History
+              </Typepography>
+            </div>
+          </Toolbar>
         </AppBar>
       </div >
     );
@@ -50,6 +78,7 @@ class Header extends React.Component<IProps, IHeaderState> {
 
 const mapStateToProps = (state: IRootState) => {
   return {
+    games: state.game.games,
   };
 };
 
