@@ -1,0 +1,56 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "noEmit": true, // Prevent generation of js and js.map files
+    "target": "esnext", // ECMAScript target version. "ESNext" targets latest supported 
+    // "allowJs": true, // Allow JavaScript files to be compiled.
+    // "module": "commonjs", // Specify module code generation
+    "module": "esnext", // Specify module code generation
+    "noImplicitAny": true, // Prevent any type
+    "moduleResolution": "Node", // Determine how modules get resolved
+    "removeComments": true, // Remove all comments except copy-right header comments beginning with /*!
+    "jsx": "react", // to support this files
+    "sourceMap": true, // Generates corresponding .map file, but `noEmit` should be false to visualize
+    "pretty": true, // Stylize errors and messages using color and context.
+    "baseUrl": "./", // Base directory to resolve non-relative module names
+    "skipLibCheck": true, // Prevent ts checking in node_modules
+    // "types": [
+    //   "node"
+    // ],
+    // "typeRoots": [ // List of folders to include type definitions 
+    //   "./node_modules/@types"
+    // ],
+    "paths": {
+      "*": [
+        "./node_modules/@types/*", // Prevent ts checking in node_modules
+        "*"
+      ]
+    },
+    /**
+    * List of library files to be included in the compilation. Prevent default, because the default libraries are specifics for web
+    */
+    "lib": [
+      "es6",
+      "es7",
+      "dom"
+    ],
+    /**
+    * `esModuleInterop` and `allowSyntheticDefaultImports` Allow default imports from modules with no default export.
+    */
+    "resolveJsonModule": true, // Allows use `import` insted `require` to load `.json` files
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "types": [
+      "node"
+    ]
+  },
+  "include": [
+    "./",
+  ],
+  "exclude": [
+    "dist",
+    "build",
+    "node_modules",
+    "**/*.spec.ts"
+  ]
+}

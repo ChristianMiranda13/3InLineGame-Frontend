@@ -1,0 +1,18 @@
+{
+  "rules": {
+    "eqeqeq": "off",
+    "curly": "error",
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "no-console": "off"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2017,
+    "sourceType": "module"
+  },
+  "env": {
+    "es6": true
+  }
+}

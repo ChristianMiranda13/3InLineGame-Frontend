@@ -1,0 +1,72 @@
+html {
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body, h1, h2, h3, h4, h5, h6 {
+  font-size: 15px;
+  margin: 0;
+  line-height: 24px;
+}
+
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #efefef;
+}
+
+body, html, #app, #app > div{
+  height: 100%;
+}
+
+a {
+  color: #ff4081;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.m-b-15 {
+  margin-bottom: 15px
+}
+
+.modal {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(249, 247, 244, 0.9);
+}
+
+.centerChilds {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textExample {
+  color: red;
+  margin-bottom: 15px;
+}
+
+.truncateTextToOneLine { 
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.containerSearch {
+  width: '100%';
+  justify-content: 'flex-end';
+  display: 'flex';
+}
