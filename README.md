@@ -25,3 +25,7 @@ npm start
 ```
 
 Notice: The first time that the proyect run you need to wait until bundle finished.
+
+open in google chrome: http://localhost:3004/
+
+tweet: https://twitter.com/1992CHRISTIAN13/status/1315870188684926976?s=20
