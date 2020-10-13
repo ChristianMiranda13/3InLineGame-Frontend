@@ -11,6 +11,7 @@ This is a repo of Front created in React with TypeScript, Webpack, redux and mat
 Below you find the steps for building and run the frontend of the game and enjoy it.
 
 NOTICE: first of all, you need to run the backend. Read the `readme.md` file in the backend proyect.
+backend url: https://github.com/ChristianMiranda13/3InLineGame-Backend
 
 1. in bash
 
